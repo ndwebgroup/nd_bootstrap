@@ -1,0 +1,49 @@
+/*************************************************************************************
+ * Print Styles
+ ************************************************************************************/
+@media print {
+
+  @page {margin:0.5cm;}
+  body {font-family:Georgia, "Times New Roman", Times, serif; color:#000;}
+  img, tr {page-break-inside:avoid;}
+  p, h2, h3 {orphans:3; widows:3;}
+  h2, h3 {page-break-after:avoid;}
+
+  /* Styles
+     ----------------------------------------------------*/
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {content:"";}
+  .ndmark {width:150px;}
+
+  /* HIDDEN
+     ----------------------------------------------------*/
+  .breadcrumbs,
+  .header-util,
+  .skip-links,
+  .site-nav {display:none;}
+
+  /* STRUCTURE
+     ----------------------------------------------------*/
+  .site-header {overflow:hidden; position:relative; margin:0 0 20px; padding:0 0 20px; border-bottom:1px solid gray;}
+    .dept-nd {text-indent:-100%; white-space:nowrap; overflow:hidden;}
+    .site-header .ndmark {position:absolute; bottom:20px; right:0;}
+    .site-header li,
+    .site-title,
+    .subline {margin:0; font-family:Georgia, "Times New Roman", Times, serif;}
+    .site-header li a,
+    .site-title a,
+    .subline a {color:#000;}
+
+    .dept {font-size:0.8em;}
+    .site-title {margin:4px 0 2px; font-size:2em;}
+    .subline {font-size:1em;}
+
+  .site-content a:link:after {content:" [link: " attr(href) "] "; font-size:11px; font-family:inherit;}
+  .site-content abbr:after {content:" (" attr(title) ")";}
+
+  .site-footer {position:relative; clear:both; margin:20px 0 0; padding:20px 0 0; border-top:1px solid gray;}
+    .geo,
+    .country-name {display:none;}
+    .tel {display:block;}
+    .site-footer .ndmark {position:absolute; top:20px; right:0;}
+}

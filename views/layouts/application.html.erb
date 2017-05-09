@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Site Name" %></title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <nav class="skip-links">
+      <ul>
+        <li><a href="#content" accesskey="C" title="Skip to content = C">Skip To Content</a></li>
+        <li><a href="#nav" accesskey="S" title="Skip to navigation = S">Skip To Navigation</a></li>
+      </ul>
+    </nav>
+
+    <header id="header" role="banner" class="site-header">
+      <nav class="brandbar theme-bb-blue container-fluid">
+        <ul class="row">
+          <li class="dept-nd col-lg-6"><a href="https://www.nd.edu/">University of Notre Dame</a></li>
+          <li class="dept dept-current col-lg-6"><a href="https://opac.nd.edu/">Office of Public Affairs and Communications</a></li>
+        </ul>
+      </nav>
+      <div class="titlebar theme-tb-gold container-fluid">
+        <div class="row">
+          <div class="col">
+            <h1 class="site-title"><a href="/" accesskey="H">Site Name</a></h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <div class="">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="/domains/"><i class="fa fa-globe" aria-hidden="true"></i> Domains</a></li>
+          <li class="nav-item"><a class="nav-link" href="/domain_types/"><i class="fa fa-adjust" aria-hidden="true"></i> Domain Types</a></li>
+          <li class="nav-item"><a class="nav-link" href="/statuses/"><i class="fa fa-battery-three-quarters" aria-hidden="true"></i> Statuses</a></li>
+          <li class="nav-item"><a class="nav-link" href="/users/"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="wrapper container-fluid">
+      <main id="content" class="site-content" role="main">
+        <%= yield %>
+      </main>
+      <footer id="footer" class="site-footer row" role="contentinfo">
+        <div class="col">
+          <div class="footer-inner">
+            <div class="vcard">
+              <p class="copyright fn org">
+                <a href="https://www.nd.edu/copyright/">Copyright</a> &copy; <%= Time.now.year %>
+                <a href="https://www.nd.edu/" class="org">University of Notre Dame</a>
+              </p>
+              <p class="contact-info url adr">
+                <a href="/" class="site-link url fn">Site Name</a>
+                <span class="address"><span class="street-address">502 Grace Hall</span>, <span class="locality">Notre Dame</span>, <span class="region" title="Indiana">IN</span> <span class="postal-code">46556</span></span>
+                <span class="tel phone"><span class="type">Phone</span> 574-631-XXXX</span>
+                <span class="tel fax"><span class="type">Fax</span> 574-631-XXXX</span>
+                <span class="email"><a href="mailto:email@nd.edu">email@nd.edu</a></span>
+              </p>
+              <a href="https://www.nd.edu/" class="ndmark"><img src="https://static.nd.edu/images/marks/blue/ndmark300.png" alt="University of Notre Dame"></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+@include media-breakpoint-down(sm) {
+  .brandbar ul {padding:0;}
+}
+
+/* Medium
+   ----------------------------------------------------*/
+@include media-breakpoint-up(md) {
+  h1 {font-size:2.313em;}
+  h2 {font-size:2.063em;}
+  h3 {font-size:1.75em;}
+  h4 {font-size:1.625em;}
+  h5 {font-size:1.375em;}
+  h6 {font-size:1.125em;}
+
+  blockquote {margin:2em;}
+  blockquote.pull {float:right; width:30%;}
+
+  .site-header {text-align:left;}
+  .dept-nd a {float:left; height:50px;}
+  .dept {border-top:0 none; box-shadow:none;}
+  .dept a {float:right; height:50px;}
+  .site-title {float:left; margin:0; padding:0; font-size:2.5em;
+    a {padding:1.4rem 0;}
+  }
+
+  /* Footer */
+  .site-footer {padding-top:2em; text-align:left;}
+    .contact-info {margin:0;}
+    .address {margin:0;}
+    .ndmark {position:absolute; right:0; top:2em; margin:0;}
+    .org {display:inline;}
+    .phone {clear:left;}
+}
+
+/* 800px
+   ----------------------------------------------------*/
+@media only screen and (min-width:50em) {
+  .dept {display:block;} /* Adjust when the department title appears depending on the width of the graphic */
+}
+
+/* Large
+   ----------------------------------------------------*/
+@include media-breakpoint-up(lg) {
+  .org {display:inline-block; margin:0 1em 0 0;}
+  .site-link, .address, .site-link, .tel, .email {float:left; margin:0 1rem 0 0;}
+}

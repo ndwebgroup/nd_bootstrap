@@ -1,0 +1,90 @@
+@mixin department-image-width($dept) {
+  @if $dept == arch {
+    width: 287px; /* School of Architecture */
+  } @else if $dept == athl {
+    width: 288px /* Department of Athletics */
+  } @else if $dept == auxo {
+    width: 254px /* Auxiliary Operations */
+  } @else if $dept == buso {
+    width: 357px /* Office of Business Operations */
+  } @else if $dept == cams {
+    width: 195px /* Campus Services */
+  } @else if $dept == coal {
+    width: 316px /* College of Arts and Letters */
+  } @else if $dept == cont {
+    width: 274px /* Office of the Controller */
+  } @else if $dept == cosc {
+    width: 218px /* College of Science */
+  } @else if $dept == engr {
+    width: 285px /* College of Engineering */
+  } @else if $dept == enrl {
+    width: 253px /* Enrollment Division */
+  } @else if $dept == evpo {
+    width: 450px /* Office of the Executive Vice President */
+  } @else if $dept == fdao {
+    width: 381px /* Facilities Design and Operations */
+  } @else if $dept == fyst {
+    width: 252px /* First Year of Studies */
+  } @else if $dept == genc {
+    width: 321px /* Office of General Council */
+  } @else if $dept == grad {
+    width: 244px /* The Graduate School */
+  } @else if $dept == hurs {
+    width: 323px /* Office of Human Resources */
+  } @else if $dept == invs {
+    width: 231px /* Investment Office */
+  } @else if $dept == mcob {
+    width: 352px /* Mendoza College of Business */
+  } @else if $dept == meca {
+    width: 565px /* Office of Mission Engagement and Church Affairs */
+  } @else if $dept == laws {
+    width: 170px /* The Law School */
+  } @else if $dept == ooit {
+    width: 444px /* Office of Information Technologies */
+  } @else if $dept == opac {
+    width: 525px /* Office of Public Affairs and Communications */
+  } @else if $dept == ores {
+    width: 223px /* Office of Research */
+  } @else if $dept == pres {
+    width: 258px /* Office of the President */
+  } @else if $dept == prov {
+    width: 235px /* Office of the Provost */
+  } @else if $dept == staf {
+    width: 313px /* Office of Student Affairs */
+  } @else if $dept == urel {
+    width: 375px /* Office of University Relations */
+  } @else if $dept == vpor {
+    width: 466px /* Office of the Vice President for Research */
+  } @else if $dept == intr {
+    width: 380px /* Office of Internationalization */
+  } @else if $dept == spir {
+    width: 556px /* Office of Strategic Planning and Institutional Research */
+  } @else if $dept == acfs {
+    width: 202px /* Office of Finance */
+  }
+}
+
+/*************************************************************************************
+ * 4. Themes
+ ************************************************************************************/
+@media screen,projection {
+
+  /** Brand Bar **/
+  .brandbar.theme-bb-blue {background:$brand-primary; border-bottom:1px solid #000;}
+    .dept-nd a {width:301px; background-image:url(https://static.nd.edu/images/brandbar/dept-nd-white.png);}
+    .dept-current a {@include department-image-width($department); background-image:url(https://static.nd.edu/images/brandbar/dept-#{$department}-white.png);}
+
+    .dept-nd a,
+    .dept a {background-size:auto 50px;}
+
+  /** Title Bar **/
+  .titlebar.theme-tb-gold {background:linear-gradient(to bottom, #f1df9b 0%, #e6bb4b 50%, #e2b53b 51%, #dea81f 100%); border-bottom:2px solid #bd8a00;}
+
+}
+
+/* Hi-res
+   ----------------------------------------------------*/
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){
+  .dept-nd a {background-image:url(https://static.nd.edu/images/brandbar/dept-nd-white@2x.png);}
+  .dept-current a {background-image:url(https://static.nd.edu/images/brandbar/dept-#{$department}-white@2x.png);}
+}

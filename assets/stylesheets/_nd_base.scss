@@ -1,0 +1,99 @@
+*, *:before, *:after {box-sizing:border-box;}
+@viewport {width:device-width; zoom:1;}
+html {width:100%; margin:0; padding:0; font-size:100%; overflow-y:scroll; text-size-adjust:100%; font-smoothing:antialiased;}
+body {width:100%; margin:0; padding:0; color:#333; font:1em/1.5em "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; background:asset-url('bg.png') 0 0 repeat;}
+small {font-size:80%;}
+a {color:#1779ba;}
+label {font-weight:bold;}
+img {max-width:100%;}
+
+h1 {margin:1rem 0; font-size:1.8rem; font-weight:300;
+  small {color:#cacaca;}
+}
+table {border:1px solid #ccc; background:#fff;}
+thead th,
+thead td,
+tbody th,
+tbody td,
+tfoot th,
+tfoot td {padding:0.4rem;}
+
+a {color:#004da3; outline:none; -webkit-tap-highlight-color:rgba(220,179,57,.9);}
+a:hover {color:#002b5b}
+a:active {color:#aa272f;}
+a:focus {outline:thin dotted;}
+
+h1,h2,h3,h4,h5,h6 {color:#002b5b; font-weight:300; text-shadow:0 1px rgba(255,255,255,0.6); text-rendering:optimizeLegibility; font-family:GPC, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {text-decoration:none; color:#333;}
+h1 a:visited,h2 a:visited,h3 a:visited,h4 a:visited,h5 a:visited,h6 a:visited {color:#004da3;}
+h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover {text-decoration:underline;}
+h1 {margin-top:0; font-size:2em;}
+h2 {font-size:1.75em;}
+h3 {font-size:1.563em;}
+h4 {font-size:1.375em;}
+h5 {font-size:1.188em;}
+h6 {font-size:1em;}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {@extend .form-control;}
+input[type="date"] {width:auto;}
+input[type="radio"] {margin-right:0.25rem;}
+input[type="radio"] + label {margin-right:1rem; font-weight:normal;}
+.group-label {display:block;}
+
+.skip-links {border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px;}
+.skip-links:active, .skip-links:focus {clip:auto; height:auto; margin:0; overflow:visible; position:static; width:auto;}
+
+@media screen,projection {
+  .visibility-hidden {display:none;}
+  .ib {display:inline; vertical-align:top;}
+  .list-inline {margin:0; padding:0; list-style:none;
+    li {display:inline-block; margin-right:1rem;}
+  }
+  .nowrap {white-space:nowrap;}
+  .tablewrap {position:relative; overflow-y:auto; margin:0 auto;}
+
+  /* HEADER
+     ----------------------------------------------------*/
+  .site-header {margin:0; text-align:center;}
+  .brandbar {
+    ul {margin:0; padding:0; list-style:none;}
+    li {margin:0;}
+  }
+  .dept {display:none; border-top: 1px solid  #000; box-shadow:0 1px 0 rgba(0,122,217,0.4) inset;}
+  .site-header li {margin:0; padding:0;}
+  .brandbar a {display:block;  margin:0 auto; text-decoration:none; height:50px; text-indent:-9999px; overflow:hidden; background-repeat:no-repeat;}
+  .dept-nd img {display:none;}
+    .dept-nd a {background-position:left 0;}
+    .dept a {background-position:right 0;}
+
+  .site-title {clear:both; margin:0.4em auto; padding:0; line-height:1em; font-size:1.75em; font-weight:300; text-shadow:0 1px rgba(255,255,255,0.7);
+    a {display:block; border:none; color:#002b5b; text-decoration:none;}
+      a:visited {color:#002b5b;}
+      a:hover {text-decoration:none;}
+  }
+
+  /* CONTENT
+     ----------------------------------------------------*/
+  .wrapper {padding:2rem 1rem;}
+  .page-title {margin:0 0 .5em; padding:0 0 0.15em; border-bottom:2px solid #dcb439;}
+
+  /* FOOTER
+     ----------------------------------------------------*/
+  .site-footer {position:relative; clear:both; text-align:center;
+    .footer-inner {position:relative; padding-top:2em; padding-bottom:2em; border-top:1px solid #ccc; box-shadow:inset 0 1px 0 rgba(255,255,255,0.9);}
+  }
+  .vcard .fn,
+  .site-footer p { font-size:14px; }
+  .site-info {margin:1em 0;
+    li {display:inline-block; *display:inline; *zoom:1; margin:0 2%;}
+    a {text-decoration:underline;}
+  }
+  .geo,
+  .country-name {border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px;}
+  .org,
+  .tel {display:block;}
+  .ndmark {display:block; width:200px; margin:2em auto;}
+}

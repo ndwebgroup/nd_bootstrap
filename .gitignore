@@ -1,0 +1,12 @@
+.DS_Store
+*.rbc
+.rspec
+/log
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/tmp
+/public/system
+/coverage/
+/spec/tmp
