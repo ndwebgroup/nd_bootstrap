@@ -1,6 +1,4 @@
-@include media-breakpoint-down(sm) {
-  .brandbar ul {padding:0;}
-}
+
 
 /* Medium
    ----------------------------------------------------*/
@@ -24,7 +22,7 @@
   }
 
   /* Footer */
-  .site-footer {padding-top:2em; text-align:left;}
+  .site-footer {text-align:left;}
     .contact-info {margin:0;}
     .address {margin:0;}
     .ndmark {position:absolute; right:0; top:2em; margin:0;}
@@ -32,9 +30,9 @@
     .phone {clear:left;}
 }
 
-/* 800px
+/* 1000px
    ----------------------------------------------------*/
-@media only screen and (min-width:50em) {
+@media only screen and (min-width:62.5em) {
   .dept {display:block;} /* Adjust when the department title appears depending on the width of the graphic */
 }
 
@@ -43,4 +41,11 @@
 @include media-breakpoint-up(lg) {
   .org {display:inline-block; margin:0 1em 0 0;}
   .site-link, .address, .site-link, .tel, .email {float:left; margin:0 1rem 0 0;}
+  .container-fluid > .row {max-width:$max-lg-container-width; margin-left:auto; margin-right:auto;}
+}
+
+/* X-Large
+   ----------------------------------------------------*/
+@include media-breakpoint-up(xlg) {
+  .container-fluid > .row {max-width:$max-xlg-container-width;}
 }
