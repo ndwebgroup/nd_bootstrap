@@ -44,6 +44,7 @@ input[type="radio"] + label {margin-right:1rem; font-weight:normal;}
 nav ul {margin:0; padding:0;}
 
 .group-label {display:block;}
+.visibility-hidden {position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;}
 .skip-links {border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px;}
 .skip-links:active, .skip-links:focus {clip:auto; height:auto; margin:0; overflow:visible; position:static; width:auto;}
 
@@ -56,7 +57,6 @@ nav ul {margin:0; padding:0;}
 .btn-cancel {@extend .btn-secondary;}
 
 @media screen,projection {
-  .visibility-hidden {display:none;}
   .list-inline {margin:0; padding:0; list-style:none;
     li {display:inline-block; margin-right:1rem;}
   }
