@@ -11,13 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require_tree .
 
 /*!
  * General Helpers
  */
-jQuery(function($){
+$(document).on('turbolinks:load', function() {
   // Table overflow
   $('table').wrap('<div class="tablewrap"></div>'); // requires .tablewrap styles
 });

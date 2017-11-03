@@ -47,6 +47,14 @@ nav ul {margin:0; padding:0;}
 .skip-links {border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px;}
 .skip-links:active, .skip-links:focus {clip:auto; height:auto; margin:0; overflow:visible; position:static; width:auto;}
 
+/* Buttons
+----------------------------------------------------*/
+.btn-primary {@include button-variant($brand-primary, $brand-primary, lighten($brand-primary, 8%), $brand-primary);}
+.btn-secondary {@include button-variant($white, $gray-400);}
+.btn-clear {background:transparent;}
+.btn-save {@extend .btn-success;}
+.btn-cancel {@extend .btn-secondary;}
+
 @media screen,projection {
   .visibility-hidden {display:none;}
   .list-inline {margin:0; padding:0; list-style:none;
