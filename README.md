@@ -1,6 +1,6 @@
 # ND Bootstrap
 
-Starter files for a Notre Dame themed [Bootstrap 4 project](https://v4-alpha.getbootstrap.com/). Files are set up to mirror a Rails application.
+Starter files for a Notre Dame themed [Bootstrap 4 project](http://getbootstrap.com/). Files are set up to mirror a Rails application.
 
 You'll probably want to use the [Bootstrap gem](https://github.com/twbs/bootstrap-rubygem) and then bring over these files as needed.
 
